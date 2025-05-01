@@ -1,7 +1,5 @@
 "use client";
-import { Cinzel } from "next/font/google";
-import Image from "next/image";
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent } from "react";
 
 interface WeatherData{
   temperature :number;
@@ -33,8 +31,8 @@ export default function Home() {
       console.log("city found")
     }
     const response=await data.json();
-    const t:number=response.location.temp_c
-    // {console.log("temperature in celcuis : "+ response.current.temp_c )}
+   
+   
  
     const weatherData:WeatherData={
       temperature:response.current.temp_c,
